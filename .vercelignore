@@ -1,8 +1,5 @@
-.vercel
-.env*
-.openai
-dist
 shots
+dist
 review
 *.py
 check-*.jpg
