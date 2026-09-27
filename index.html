@@ -176,6 +176,12 @@ section{padding:clamp(6rem,12vw,11rem) 0;position:relative}
 
 /* day job */
 .job .tools{display:grid;gap:clamp(5rem,10vw,9rem);margin-top:clamp(4rem,8vw,7rem)}
+.job .books{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,7rem);align-items:start;margin-top:clamp(5rem,10vw,9rem);padding-top:clamp(3rem,6vw,5rem);border-top:1px solid var(--line)}
+.job .books .big{font-family:var(--serif);font-size:clamp(1.9rem,3.4vw,3.2rem);line-height:1.12;letter-spacing:-.02em;font-weight:400}
+.job .books .big i{color:var(--accent-2)}
+.job .books p{color:var(--muted);font-weight:300;font-size:1.05rem}
+.job .books p+p{margin-top:1.1rem}
+@media(max-width:800px){.job .books{grid-template-columns:1fr}}
 .tool{display:grid;grid-template-columns:4fr 8fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 .tool:nth-child(even) .tx{order:2}
 .tool .n{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--accent)}
@@ -336,11 +342,18 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
     <div class="head">
       <div>
         <span class="eyebrow rv">The day job · Transamerica</span>
-        <h2 class="rv d1" style="margin-top:1.5rem">Nine to five, <span class="em">same standards.</span></h2>
+        <h2 class="rv d1" style="margin-top:1.5rem">Not just the paint. <span class="em">The engine too.</span></h2>
       </div>
-      <p class="lead rv d2">By day I'm a data consultant on retirement plan conversions. The team needed tools nobody was going to build for them, so I built them. Six of them, below. Client data stays at work.</p>
+      <p class="lead rv d2">By day I'm a data consultant on retirement plan conversions. Fifteen years working with numbers: department-wide audits, millions of dollars reconciled to the penny, and the databases, searches, and dashboards a team leans on every morning. When we needed tools nobody was going to build for us, I built them. Six of them, below. Client data stays at work.</p>
     </div>
     <div class="tools" id="tools"></div>
+    <div class="books">
+      <div class="big rv">Which means I can help with your <i>books,</i> too.</div>
+      <div class="rv d1">
+        <p>If the website is the storefront, this is the back office. I've run one for fifteen years, and I can set yours up: spreadsheets that update themselves, a searchable place for your records, numbers that reconcile, and a filing system where you can find anything a year from now.</p>
+        <p>Most designers hand you a pretty front and leave the rest to you. I'd rather build both.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -368,7 +381,7 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
       <div class="rv d1">
         <p>I'm Joel Abacherli, a designer in Tracy, California. I build websites for people who learned a trade, got good at it, and had the guts to go into business for themselves. That's the hard part, and they already did it. I'm just making sure the world can see it.</p>
         <p>A note on the work here. Klemm Real Estate is a paying client. Every other site on this page is a concept I built on my own time for a real local business, because I liked what they do and wanted to show them what they could have. If you see your business here: nobody paid me, I'm not claiming they did, and I'd love to hear from you.</p>
-        <p>I also build internal tools, training simulators, and print-ready reports when the job calls for it.</p>
+        <p>I also do the numbers side: bookkeeping systems, databases, audits, and internal tools. Fifteen years of it. Front end and back end, same person.</p>
       </div>
     </div>
   </div>
