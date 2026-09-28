@@ -303,7 +303,7 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
         <span class="eyebrow rv">Selected work · Concept builds</span>
         <h2 class="rv d1" style="margin-top:1.5rem">Eight I'd put on the <span class="em">wall.</span></h2>
       </div>
-      <p class="lead rv d2">These are real local businesses I admire, and sites I built for them on my own time to show what they could have. None of them are clients yet. Where there's a link, that's the demo I sent over. Scroll sideways.</p>
+      <p class="lead rv d2">These are real local businesses I admire, and sites I built for them on my own time to show what they could have. None of them are clients yet. Every one is live, so click through. Scroll sideways.</p>
     </div>
   </div>
   <div class="track-wrap" id="trackWrap">
@@ -411,47 +411,48 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
 <script>
 const CH="https://";
 const SITE=s=>`${CH}${s}.jabach0811.chatgpt.site`;
+const V=s=>`https://${s}.vercel.app`;
 const SELECTED=[
-  {k:"duelers",t:"Duelers Guild",c:"Cards & tabletop shop · Tracy",d:"A game store that sells singles, runs events, and needed a shop that feels like the counter. Deckbuilder, buylist, and saved products."},
-  {k:"hipco",t:"Harrington Process Solutions",c:"Industrial distribution",d:"Ninety branches, 300k products, one phone number. A B2B site that treats a plant manager at 2 a.m. like the customer he is."},
+  {k:"duelers",t:"Duelers Guild",c:"Cards & tabletop shop · Tracy",d:"A game store that sells singles, runs events, and needed a shop that feels like the counter. Deckbuilder, buylist, and saved products.",u:V("duelers-guild")},
+  {k:"hipco",t:"Harrington Process Solutions",c:"Industrial distribution",d:"Ninety branches, 300k products, one phone number. A B2B site that treats a plant manager at 2 a.m. like the customer he is.",u:V("harrington-process-solutions")},
   {k:"serenity",t:"Serenity Rose Studios",c:"Salon · Manteca",d:"A private hair studio with a soft, warm palette and booking one tap away.",u:SITE("serenity-rose-studios")},
   {k:"taqueria",t:"Taqueria La Mexicana",c:"Restaurant · Tracy",d:"Three counters, one hometown favorite since 1994. Loud type, real tacos, locations up front.",u:SITE("taqueria-la-mexicana")},
   {k:"cherry",t:"Novels by Cherry",c:"Author site",d:"Southern fiction for women who bounce back. Dark florals, script logo, a bookshelf that sells.",u:SITE("novels-by-cherry")},
-  {k:"inbloom",t:"In Bloom Tattoo & Piercing",c:"Tattoo studio · Tracy",d:"Blackletter wordmark, artist roster, and a gallery that lets the work speak."},
-  {k:"pearl",t:"Pearl Theory",c:"Boba & tea",d:"107 drinks, zero boring ones. Illustrated, candy-bright, and a build-your-drink flow."},
-  {k:"bill-brim",t:"Bill & Brim",c:"Custom hat bar · Ripon",d:"A hat bar and boutique that books parties. Warm leather tones and a page that sells the experience.",u:SITE("bill-and-brim-ripon")},
+  {k:"inbloom",t:"In Bloom Tattoo & Piercing",c:"Tattoo studio · Tracy",d:"Blackletter wordmark, artist roster, and a gallery that lets the work speak.",u:V("in-bloom-tattoo")},
+  {k:"pearl",t:"Pearl Theory",c:"Boba & tea",d:"107 drinks, zero boring ones. Illustrated, candy-bright, and a build-your-drink flow.",u:V("pearl-theory-five")},
+  {k:"bill-brim",t:"Bill & Brim",c:"Custom hat bar · Ripon",d:"A hat bar and boutique that books parties. Warm leather tones and a page that sells the experience.",u:V("bill-and-brim")},
 ];
 const SHELF=[
-  {k:"amazing",t:"Amazing Kitchen",c:"Food & drink",u:SITE("amazing-kitchen-tracy-ca")},
+  {k:"amazing",t:"Amazing Kitchen",c:"Food & drink",u:V("amazing-kitchen")},
   {k:"antojitos",t:"Antojitos de mi Pueblo",c:"Food & drink",u:SITE("antojitos-de-mi-pueblo-home"),w:1},
-  {k:"hella",t:"Hella Pie Pizza Co.",c:"Food & drink"},
-  {k:"ellis",t:"Ellis Creamery",c:"Food & drink"},
-  {k:"t4",t:"T4 Tracy",c:"Food & drink"},
+  {k:"hella",t:"Hella Pie Pizza Co.",c:"Food & drink",u:V("hella-pie-pizza")},
+  {k:"ellis",t:"Ellis Creamery",c:"Food & drink",u:V("ellis-creamery")},
+  {k:"t4",t:"T4 Tracy",c:"Food & drink",u:V("t4-tracy")},
   {k:"sisig",t:"Sisig & Boba",c:"Food & drink",u:SITE("sisig-boba-tracy")},
-  {k:"baristas",t:"Barista's Coffee House",c:"Food & drink"},
-  {k:"honey",t:"Madera's Queen Honey",c:"Food & drink",w:1},
+  {k:"baristas",t:"Barista's Coffee House",c:"Food & drink",u:V("baristas-coffee-house")},
+  {k:"honey",t:"Madera's Queen Honey",c:"Food & drink",w:1,u:V("maderas-queen-honey")},
   {k:"tenth",t:"Tenth Street Barber Co.",c:"Barbers & beauty",u:SITE("tenth-street-barber-co-tracy-ca")},
   {k:"tenth-dark",t:"Tenth Street, dark edition",c:"Barbers & beauty",u:SITE("tenth-street-dark-editorial")},
   {k:"silent",t:"Silent Standard",c:"Barbers & beauty",u:SITE("silent-standard-barbershop"),w:1},
   {k:"linework",t:"Linework",c:"Barbers & beauty",u:SITE("linework-young-barbershop")},
   {k:"integrity",t:"Integrity Kutz N' Stylez",c:"Barbers & beauty",u:SITE("integrity-kutz-n-stylez")},
-  {k:"monkeys",t:"12 Monkeys Tattoos",c:"Barbers & beauty"},
-  {k:"stroup",t:"The Stroup Law Firm",c:"Law",w:1},
-  {k:"dangelo",t:"D'Angelo Law",c:"Law"},
-  {k:"hem",t:"Hakeem, Ellis & Marengo",c:"Law"},
-  {k:"jenna",t:"Jenna Marie Diaz",c:"Real estate"},
-  {k:"shaly",t:"Shaly Dhanjal",c:"Real estate"},
-  {k:"ehmad",t:"Agent4Life Realty",c:"Real estate",w:1},
-  {k:"closet",t:"My Best Friend's Closet",c:"Retail",u:SITE("my-best-friends-closet")},
-  {k:"miabella",t:"Mia Bella's",c:"Retail"},
-  {k:"mainstreet",t:"Main Street Music",c:"Retail",u:SITE("main-street-music-tracy-ca")},
-  {k:"embarc",t:"Embarc Tracy",c:"Retail",w:1},
-  {k:"terriquez",t:"Terriquez Landscaping",c:"Trades & services"},
-  {k:"silva",t:"Silva Ranch",c:"Trades & services",u:SITE("silva-family-ranch")},
-  {k:"delta",t:"Delta Sierra Mechanical",c:"Trades & services"},
+  {k:"monkeys",t:"12 Monkeys Tattoos",c:"Barbers & beauty",u:V("12-monkeys-tattoos")},
+  {k:"stroup",t:"The Stroup Law Firm",c:"Law",w:1,u:V("stroup-law-firm")},
+  {k:"dangelo",t:"D'Angelo Law",c:"Law",u:V("dangelo-law")},
+  {k:"hem",t:"Hakeem, Ellis & Marengo",c:"Law",u:V("hakeem-ellis-marengo")},
+  {k:"jenna",t:"Jenna Marie Diaz",c:"Real estate",u:V("jenna-marie-diaz")},
+  {k:"shaly",t:"Shaly Dhanjal",c:"Real estate",u:V("shaly-dhanjal")},
+  {k:"ehmad",t:"Agent4Life Realty",c:"Real estate",w:1,u:V("agent4life-realty")},
+  {k:"closet",t:"My Best Friend's Closet",c:"Retail",u:V("my-best-friends-closet")},
+  {k:"miabella",t:"Mia Bella's",c:"Retail",u:V("mia-bellas")},
+  {k:"mainstreet",t:"Main Street Music",c:"Retail",u:V("main-street-music")},
+  {k:"embarc",t:"Embarc Tracy",c:"Retail",w:1,u:V("embarc-tracy")},
+  {k:"terriquez",t:"Terriquez Landscaping",c:"Trades & services",u:V("terriquez-landscaping")},
+  {k:"silva",t:"Silva Ranch",c:"Trades & services",u:V("silva-family-ranch")},
+  {k:"delta",t:"Delta Sierra Mechanical",c:"Trades & services",u:V("delta-sierra-mechanical")},
   {k:"loud",t:"Loud & Clear Car Audio",c:"Trades & services",u:SITE("loud-clear-car-audio-shop")},
   {k:"gerodias",t:"Gerodias Family Dentistry",c:"Health",u:SITE("edward-gerodias-dentistry"),w:1},
-  {k:"wire",t:"Wire Runner",c:"Tools & internal",u:SITE("wire-runner")},
+  {k:"wire",t:"Wire Runner",c:"Tools & internal",u:V("wire-runner")},
 ];
 const PHONES=["m-serenity","m-taqueria","m-cherry","m-hipco","m-pearl","m-inbloom","m-bill-brim","m-closet","m-terriquez","m-klemm"];
 const ARROW='<svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>';
