@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Joel Abacherli — Websites for people who bet on themselves</title>
-<meta name="description" content="You did the hard part. I build the website that lets the world see it. Sites for independent businesses across California's Central Valley.">
+<title>Joel Abacherli — Website, Google listing, booking and books</title>
+<meta name="description" content="I build the website, fix your Google listing, set up booking, and clean up your books. One person, start to finish, for independent businesses in Tracy and the Central Valley.">
 <meta name="theme-color" content="#0b0b0c">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Joel Abacherli — Websites for people who bet on themselves">
-<meta property="og:description" content="You did the hard part. I build the website that lets the world see it. Sites for independent businesses across California's Central Valley.">
+<meta property="og:title" content="Joel Abacherli — Website, Google listing, booking and books">
+<meta property="og:description" content="I build the website, fix your Google listing, set up booking, and clean up your books. One person, start to finish, for independent businesses in Tracy and the Central Valley.">
 <meta property="og:url" content="https://joel-portfolio-gilt.vercel.app/">
 <meta property="og:image" content="https://joel-portfolio-gilt.vercel.app/img/share.jpg">
 <meta property="og:image:width" content="1200">
@@ -102,7 +102,7 @@ section{padding:clamp(6rem,12vw,11rem) 0;position:relative}
 /* hero */
 .hero{min-height:100dvh;display:grid;align-items:end;padding:9rem 0 0;overflow:hidden;position:relative}
 .hero .glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(60vw 40vh at 18% 20%,rgba(255,90,43,.16),transparent 60%),radial-gradient(40vw 35vh at 85% 10%,rgba(255,177,153,.07),transparent 60%)}
-.hero h1{font-size:clamp(3rem,8.6vw,8.4rem);max-width:15ch}
+.hero h1{font-size:clamp(2.5rem,5.4vw,5.6rem);max-width:19ch}
 .hero .sub{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end;margin-top:2.25rem}
 .hero .actions{display:flex;gap:.6rem;flex-wrap:wrap}
 @media(max-width:800px){.hero .sub{grid-template-columns:1fr}}
@@ -231,6 +231,38 @@ section{padding:clamp(6rem,12vw,11rem) 0;position:relative}
 .contact .mail:hover{color:var(--ink)}
 footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;letter-spacing:.04em}
 
+/* pricing */
+.pricing .top{text-align:center;max-width:48rem;margin:0 auto clamp(2.5rem,5vw,4rem)}
+.pricing .top .lead{margin:1.25rem auto 0}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.tier{display:flex;flex-direction:column;padding:1.6rem;border:1px solid var(--line-2);border-radius:1.25rem;background:rgba(255,255,255,.02)}
+.tier.pick{border-color:var(--accent)}
+.tier h3{font-size:1.05rem;letter-spacing:-.01em}
+.tier .price{margin-top:.8rem;font-size:clamp(2rem,2.6vw,2.5rem);font-weight:500;letter-spacing:-.035em;line-height:1}
+.tier .price small{margin-left:.4rem;font-size:.85rem;font-weight:400;letter-spacing:0;color:rgba(242,239,233,.55)}
+.tier .for{margin-top:.9rem;font-size:.92rem;font-weight:300;line-height:1.45}
+.tier ul{list-style:none;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid var(--line);display:grid;gap:.7rem;font-size:.9rem;font-weight:300;line-height:1.4}
+.tier li{display:grid;grid-template-columns:1rem 1fr;gap:.65rem}
+.tier li svg{width:1rem;height:1rem;margin-top:.1rem;fill:none;stroke:rgba(242,239,233,.45);stroke-width:2.2}
+.tier.pick li svg{stroke:var(--accent)}
+.tier .foot{margin-top:auto;padding-top:1.6rem}
+.tier .note{padding-top:1.2rem;border-top:1px solid var(--line);font-size:.78rem;line-height:1.5;color:rgba(242,239,233,.55)}
+.tier .btn{width:100%;justify-content:space-between;margin-top:1.2rem}
+.tier.pick .btn{background:var(--accent);color:#fff}
+.tier.pick .btn .i{background:rgba(255,255,255,.18)}
+.tier.pick .btn:hover .i{background:#fff;color:var(--accent)}
+.promises{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 4rem;margin-top:clamp(3rem,6vw,5rem)}
+.promises h3{grid-column:1/-1;font-size:clamp(1.4rem,2.2vw,2rem)}
+.promises p{font-weight:300;max-width:52ch}
+.promises b{font-weight:500}
+.pricing .after{margin-top:clamp(3rem,6vw,5rem)}
+.pricing .after h3{font-size:clamp(1.4rem,2.2vw,2rem)}
+.pricing .after p{margin-top:.8rem;font-weight:300;max-width:44ch}
+.pricing .after .btn{margin-top:1.4rem}
+@media(max-width:1100px){.tiers{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.promises{grid-template-columns:1fr}}
+@media(max-width:640px){.tiers{grid-template-columns:1fr}}
+
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none;filter:none}.intro{display:none}}
 </style>
 </head>
@@ -239,7 +271,7 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
 
 <div class="intro" id="intro" aria-hidden="true">
   <div class="stack">
-    <div class="kicker">Websites for people who bet on themselves</div>
+    <div class="kicker">Website, Google, booking and books</div>
     <div class="name" id="introName">Joel Abacherli</div>
     <div class="rule"><i id="rule"></i></div>
   </div>
@@ -252,20 +284,19 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
   <a class="l" href="#work">Work</a>
   <a class="l" href="#dayjob">Day job</a>
   <a class="l" href="#process">Process</a>
+  <a class="l" href="#pricing">Pricing</a>
   <a class="l" href="#about">About</a>
-  <a class="btn sm cta" href="#contact">Let's talk <span class="i"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+  <a class="btn sm cta" href="#contact">Free preview <span class="i"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
 </nav>
 
 <header class="hero" id="top">
   <div class="glow"></div>
   <div class="wrap">
-    <span class="eyebrow rv">Websites for independent businesses · Central Valley, CA</span>
-    <h1 class="rv d1" style="margin-top:1.5rem">You already did the hard part. I make sure the world <span class="em">can see it.</span></h1>
+    <h1 class="rv d1">I build the website, fix your Google listing, set up booking, and <span class="em">clean up your books.</span></h1>
     <div class="sub">
-      <p class="lead rv d2">Learning a trade, getting good at it, and having the guts to go out on your own: that's ninety percent of the work, and you've done it. I handle the last stretch. A website that gives your business the best first impression it can make. Or, if the first one's already out there, the best next one.</p>
+      <p class="lead rv d2">Everything you need to look like the best business in town and run like it. One person, start to finish, for independent businesses in Tracy and the Central Valley.</p>
       <div class="actions rv d3">
-        <a class="btn" href="#featured">See the work <span class="i"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span></a>
-        <a class="btn ghost" href="#contact">Start a project <span class="i"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        <a class="btn" href="#contact">Get my free preview <span class="i"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
       </div>
     </div>
   </div>
@@ -386,14 +417,36 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
   </div>
 </section>
 
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="top">
+      <span class="eyebrow rv">Pricing</span>
+      <h2 class="rv d1" style="margin-top:1.5rem">Pick how much I take <span class="em">off your plate.</span></h2>
+      <p class="lead rv d2">Every project starts the same way. I build your homepage before you pay. If you don't love it, you owe nothing.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier rv"><h3>Front Door</h3><div class="price">$500<small>one time</small></div><p class="for">I build you a one-page website and fix your Google listing.</p><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>One page, built for phones first: what you do, your hours, how to reach you</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Your own .com, first year covered</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Google listing fixed: right hours, real photos, linked to your site</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>14 days of changes by text</span></li></ul><div class="foot"><p class="note">Promises: See It First. Live in 7 Days, or Half Off.</p><a class="btn" href="#contact">Get my free preview <span class="i"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div></div>
+      <div class="tier rv d1"><h3>Front of House</h3><div class="price">$1,500<small>one time</small></div><p class="for">I build the full website, then set up booking and reviews.</p><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Everything in Front Door</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Pages for your services, prices, menu or shop</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>A booking or quote button that goes straight to you</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>A review card for the counter, plus a ready-made text that asks happy customers for a review</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>3 months of changes by text</span></li></ul><div class="foot"><p class="note">Promises: See It First. Live in 14 Days, or Half Off. Next-Day Changes. Ten Reviews in 90 Days.</p><a class="btn" href="#contact">Get my free preview <span class="i"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div></div>
+      <div class="tier pick rv d2"><h3>Front and Back</h3><div class="price">$5,000<small>one time</small></div><p class="for">I do everything up front, then clean up your books.</p><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Everything in Front of House</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Your books cleaned up and moved into simple sheets that sort income and expenses for you</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>A one-page numbers report every month for 6 months</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>A page for each town you serve</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>A photo day at your business</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>6 months of changes by text</span></li></ul><div class="foot"><p class="note">Promises: Everything above, plus Report by the 5th. Live in 30 Days, or Half Off.</p><a class="btn" href="#contact">Get my free preview <span class="i"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div></div>
+      <div class="tier rv d3"><h3>The Whole Business</h3><div class="price">$20,000+<small>one time</small></div><p class="for">I rebuild the whole thing around how you work, then stay on for a full year.</p><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Everything in Front and Back</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>A custom website built around how you sell: online ordering, listings, more than one location, or a site for each town you serve</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Up to three custom tools for how you work, like an order pad, a quote calculator or an inventory sheet</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>I move you off any website company you're overpaying, onto a site you own</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Your paper records moved into one searchable place</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>A photo day every season</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>A short promo video for your site and social media</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>The numbers report every month for a year, plus a sit-down every quarter to go over it</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Your Google listing and reviews looked after all year</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>A year of changes, and you're first in line</span></li></ul><div class="foot"><p class="note">Promises: Everything above, plus $1,000 a Week Late and Busier by Month Six. I take on one of these at a time.</p><a class="btn" href="#contact">Let's talk <span class="i"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div></div>
+    </div>
+    <div class="promises rv"><h3>The promises</h3><p><b>See It First.</b> I build your homepage before you pay. Don't love it, and you owe nothing.</p><p><b>Live on Time, or Half Off.</b> Your site goes live by the date I promise, or you pay half. Your only job: send photos and answers within two days when I ask.</p><p><b>Next-Day Changes.</b> Text me a change and it's done by the next business day. If not, I add a free month of changes.</p><p><b>Ten Reviews in 90 Days.</b> Hand out the card and send the text I give you. If you don't have 10 new Google reviews in 90 days, I keep working on it, free, until you do.</p><p><b>Report by the 5th.</b> Your numbers report is on your phone by the 5th of every month. If not, I add a free month of reports.</p><p><b>$1,000 a Week Late.</b> For every week I miss the launch date, you get $1,000 back.</p><p><b>Busier by Month Six.</b> By month six, Google shows more calls and direction requests from your listing than the same month last year. If not, I work the next six months free.</p></div>
+    <div class="after rv">
+      <h3>Three new projects a month.</h3>
+      <p class="lead">I do this around my day job, so spots are real and they fill. Grab yours with a free preview of your homepage.</p>
+      <a class="btn" href="#contact">Get my free preview <span class="i"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
 <section class="about" id="about">
   <div class="wrap">
     <div class="grid">
       <div class="big rv">If you run the corner store, you should look as good as the big box. If you sell soda, you should look as good as <i>Coca-Cola.</i></div>
       <div class="rv d1">
-        <p>I'm Joel Abacherli, a designer in Tracy, California. I build websites for people who learned a trade, got good at it, and had the guts to go into business for themselves. That's the hard part, and they already did it. I'm just making sure the world can see it.</p>
+        <p>I'm Joel Abacherli, a designer in Tracy, California. I work with people who learned a trade, got good at it, and had the guts to go into business for themselves. That's the hard part, and they already did it. I take the rest off their plate: the website, the Google listing, the booking, and the books. They run the business. I make it look and run like the best one in town.</p>
         <p>A note on the work here. Klemm Real Estate is a paying client. Every other site on this page is a concept I built on my own time for a real local business, because I liked what they do and wanted to show them what they could have. If you see your business here: nobody paid me, I'm not claiming they did, and I'd love to hear from you.</p>
-        <p>I also do the numbers side: bookkeeping systems, databases, audits, and internal tools. Fifteen years of it. Front end and back end, same person.</p>
+        <p>The books part isn't new to me: bookkeeping systems, databases, audits, and internal tools. Fifteen years of it. Front end and back end, same person.</p>
       </div>
     </div>
   </div>
