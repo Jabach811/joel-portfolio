@@ -220,6 +220,20 @@ section{padding:clamp(6rem,12vw,11rem) 0;position:relative}
 .about p+p{margin-top:1.1rem}
 @media(max-width:800px){.about .grid{grid-template-columns:1fr}}
 
+/* review */
+.feat .quote{margin-top:1.75rem;padding-left:1.1rem;border-left:1px solid var(--line-2)}
+.feat .quote p{margin:0;font-family:var(--serif);font-size:clamp(1.15rem,1.5vw,1.4rem);line-height:1.35;color:var(--ink)}
+.quote cite{display:block;margin-top:.7rem;font-style:normal;font-size:.8rem;color:var(--muted);opacity:.7}
+.quote cite a{text-decoration:underline;text-underline-offset:3px}
+.review .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,7rem);align-items:start}
+.review .big{margin-top:1.5rem;font-family:var(--serif);font-size:clamp(1.9rem,3.4vw,3.2rem);line-height:1.12;letter-spacing:-.02em;font-weight:400}
+.review .big i{color:var(--accent-2)}
+.review .body p{color:var(--muted);font-weight:300;font-size:1.05rem}
+.review .body p+p{margin-top:1.1rem}
+.review .body cite{display:block;margin-top:2rem;font-style:normal;color:var(--ink)}
+.review .body cite span{display:block;color:var(--muted);opacity:.7;font-size:.9rem;margin-top:.2rem}
+@media(max-width:800px){.review .grid{grid-template-columns:1fr}}
+
 /* contact */
 .contact{padding-bottom:6rem}
 .contact .box{padding:.5rem;border-radius:2.4rem;background:rgba(255,255,255,.035);border:1px solid var(--line)}
@@ -322,6 +336,7 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
         <span class="eyebrow rv">Client work · Real estate</span>
         <h2 class="rv d1" style="margin-top:1.5rem">Klemm <span class="em">Real Estate</span></h2>
         <p class="lead rv d2">Jack has sold homes in Tracy for 38 years. His web presence didn't say that. He's a paying client, and this is the site we built together: I built him a home site plus six city-specific seller pages so a homeowner in Mountain House or Lathrop lands on a page that already knows their neighborhood.</p>
+        <blockquote class="quote rv d2"><p>"Joel took six websites and years of listings entirely off my plate. I now manage my listings from my phone, and when Joel says something is done, it is done. The work is first-class, and I recommend him without hesitation."</p><cite>Jack Klemm, Klemm Real Estate · <a href="#review">Read his full review</a></cite></blockquote>
         <div class="tags rv d3">
           <span class="tag">Home site</span><span class="tag">Tracy</span><span class="tag">Mountain House</span><span class="tag">Lathrop</span><span class="tag">Manteca</span><span class="tag">River Islands</span><span class="tag">Woodbridge</span><span class="tag">Featured listings</span><span class="tag">YouTube channel report</span>
         </div>
@@ -334,6 +349,30 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
         <div class="frame back" data-plx="-40"><div class="core"><img src="img/klemm-mh.webp" alt="Klemm Real Estate Mountain House seller page" loading="lazy"></div></div>
         <div class="frame main" data-plx="20"><div class="core"><img src="img/klemm.webp" alt="Klemm Real Estate home page with wind turbines over Tracy hills"></div></div>
         <div class="frame phone ph" data-plx="70"><div class="core"><img src="img/m-klemm.webp" alt="Klemm Real Estate on a phone" loading="lazy"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feat" id="eleven-mag">
+  <div class="wrap">
+    <div class="grid">
+      <div class="copy">
+        <span class="eyebrow rv">Client work · Tattoo shop</span>
+        <h2 class="rv d1" style="margin-top:1.5rem">Eleven Mag <span class="em">Tattoo</span></h2>
+        <p class="lead rv d2">Jason Lawson has been tattooing since 2002, and his Brentwood shop wins Best of Show. The old website didn't show any of it. He's a paying client, and I rebuilt the site around the work: a page for each of his eight artists, a gallery of 165 pieces you can sort by style, and new work from their Instagram added every week.</p>
+        <div class="tags rv d3">
+          <span class="tag">Home site</span><span class="tag">Brentwood</span><span class="tag">Eight artist pages</span><span class="tag">165-piece gallery</span><span class="tag">Sort by style</span><span class="tag">Weekly Instagram updates</span>
+        </div>
+        <div class="actions rv d4">
+          <a class="btn" href="https://elevenmagtattoo.com" target="_blank" rel="noopener">Visit the site <span class="i"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+          <a class="btn ghost" href="https://elevenmagtattoo.com/gallery.html" target="_blank" rel="noopener">The gallery <span class="i"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        </div>
+      </div>
+      <div class="stage rv d1">
+        <div class="frame back" data-plx="-40"><div class="core"><img src="img/eleven-jason.webp" alt="Eleven Mag Tattoo artist page for owner Jason Lawson" loading="lazy"></div></div>
+        <div class="frame main" data-plx="20"><div class="core"><img src="img/eleven.webp" alt="Eleven Mag Tattoo home page with a gold logo beside a wall of tattoo photos" loading="lazy"></div></div>
+        <div class="frame phone ph" data-plx="70"><div class="core"><img src="img/m-eleven.webp" alt="Eleven Mag Tattoo on a phone" loading="lazy"></div></div>
       </div>
     </div>
   </div>
@@ -417,6 +456,27 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
   </div>
 </section>
 
+<section class="review" id="review">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="eyebrow rv">From a client</span>
+        <div class="big rv d1">"When Joel says something is done, it is <i>done.</i>"</div>
+      </div>
+      <blockquote class="body rv d1">
+        <p>For years I put off redoing my websites. Managing six sites and years of listings felt like too large a project to take on. Joel stepped in at exactly the right time.</p>
+        <p>The transition away from my previous website and listing providers was seamless. Joel coordinated directly with their teams; my only task was to let them know I was leaving.</p>
+        <p>I now manage my own listings from my phone. I can add a property, update its status to pending or sold, and reorganize listings from the field, without returning to a desk or waiting on anyone.</p>
+        <p>Every request I make is completed promptly and exactly as I asked. I stopped double-checking his work long ago. When Joel says something is done, it is done. I trust both his word and the quality of his work.</p>
+        <p>He is consistently responsive, including evenings, weekends, and calls between my appointments. I have never had to chase him down.</p>
+        <p>The quality of the work is first-class. I'm proud to direct clients to my sites, and I've received compliments from people with genuine design expertise.</p>
+        <p>Joel delivers on what he promises. He gave me full control of my websites without taking time away from my business, and I recommend him without hesitation.</p>
+        <cite>Jack Klemm<span>Klemm Real Estate, Tracy, CA</span></cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
 <section class="pricing" id="pricing">
   <div class="wrap">
     <div class="top">
@@ -445,7 +505,7 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
       <div class="big rv">If you run the corner store, you should look as good as the big box. If you sell soda, you should look as good as <i>Coca-Cola.</i></div>
       <div class="rv d1">
         <p>I'm Joel Abacherli, a designer in Tracy, California. I work with people who learned a trade, got good at it, and had the guts to go into business for themselves. That's the hard part, and they already did it. I take the rest off their plate: the website, the Google listing, the booking, and the books. They run the business. I make it look and run like the best one in town.</p>
-        <p>A note on the work here. Klemm Real Estate is a paying client. Every other site on this page is a concept I built on my own time for a real local business, because I liked what they do and wanted to show them what they could have. If you see your business here: nobody paid me, I'm not claiming they did, and I'd love to hear from you.</p>
+        <p>A note on the work here. Klemm Real Estate and Eleven Mag Tattoo are paying clients. Every other site on this page is a concept I built on my own time for a real local business, because I liked what they do and wanted to show them what they could have. If you see your business here: nobody paid me, I'm not claiming they did, and I'd love to hear from you.</p>
         <p>The books part isn't new to me: bookkeeping systems, databases, audits, and internal tools. Fifteen years of it. Front end and back end, same person.</p>
       </div>
     </div>
@@ -518,7 +578,7 @@ const SHELF=[
   {k:"loud",t:"Loud & Clear Car Audio",c:"Trades & services",u:V("loud-clear-car-audio-shop")},
   {k:"gerodias",t:"Gerodias Family Dentistry",c:"Health",u:SITE("edward-gerodias-dentistry"),w:1},
 ];
-const PHONES=["m-serenity","m-taqueria","m-cherry","m-hipco","m-pearl","m-inbloom","m-bill-brim","m-closet","m-terriquez","m-klemm"];
+const PHONES=["m-serenity","m-taqueria","m-cherry","m-hipco","m-pearl","m-inbloom","m-bill-brim","m-closet","m-terriquez","m-klemm","m-eleven"];
 const ARROW='<svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>';
 const img=(k,alt,lazy=true)=>`<img src="img/${k}.webp" alt="${alt}"${lazy?' loading="lazy"':""} decoding="async">`;
 
@@ -589,7 +649,7 @@ let ly=0;addEventListener("scroll",()=>{const y=scrollY;nav.classList.toggle("hi
 if(!reduce){
   // featured parallax
   document.querySelectorAll("[data-plx]").forEach(el=>{
-    gsap.fromTo(el,{y:-el.dataset.plx/2},{y:+el.dataset.plx,ease:"none",scrollTrigger:{trigger:".feat",start:"top bottom",end:"bottom top",scrub:.8}});
+    gsap.fromTo(el,{y:-el.dataset.plx/2},{y:+el.dataset.plx,ease:"none",scrollTrigger:{trigger:el.closest(".feat"),start:"top bottom",end:"bottom top",scrub:.8}});
   });
   // horizontal selected work (desktop only)
   ScrollTrigger.matchMedia({
