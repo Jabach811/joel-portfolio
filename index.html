@@ -28,7 +28,7 @@
   --r:1.75rem; --pad:1.5rem;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden;-webkit-text-size-adjust:100%}
+html{overflow-x:hidden;-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body.locked{overflow:hidden}
 a{color:inherit;text-decoration:none}
@@ -223,6 +223,7 @@ section{padding:clamp(6rem,12vw,11rem) 0;position:relative}
 /* review */
 .feat .quote{margin-top:1.75rem;padding-left:1.1rem;border-left:1px solid var(--line-2)}
 .feat .quote p{margin:0;font-family:var(--serif);font-size:clamp(1.15rem,1.5vw,1.4rem);line-height:1.35;color:var(--ink)}
+.feat .quote p+p{margin-top:.55rem}
 .quote cite{display:block;margin-top:.7rem;font-style:normal;font-size:.8rem;color:var(--muted);opacity:.7}
 .quote cite a{text-decoration:underline;text-underline-offset:3px}
 .review .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,7rem);align-items:start}
@@ -361,6 +362,7 @@ footer{padding:0 0 3rem;color:var(--dim);font-size:.75rem;display:flex;justify-c
         <span class="eyebrow rv">Client work · Tattoo shop</span>
         <h2 class="rv d1" style="margin-top:1.5rem">Eleven Mag <span class="em">Tattoo</span></h2>
         <p class="lead rv d2">Jason Lawson has been tattooing since 2002, and his Brentwood shop wins Best of Show. The old website didn't show any of it. He's a paying client, and I rebuilt the site around the work: a page for each of his eight artists, a gallery of 165 pieces you can sort by style, and new work from their Instagram added every week.</p>
+        <blockquote class="quote rv d2"><p>"You are killing this website thing. I'm loving everything I'm seeing here."</p><p>"You're doing a great job, I appreciate this."</p><p>"You came in right at the right time."</p><p>"You're like my website angel lol"</p><cite>Jason Lawson, Eleven Mag Tattoo</cite></blockquote>
         <div class="tags rv d3">
           <span class="tag">Home site</span><span class="tag">Brentwood</span><span class="tag">Eight artist pages</span><span class="tag">165-piece gallery</span><span class="tag">Sort by style</span><span class="tag">Weekly Instagram updates</span>
         </div>
@@ -625,6 +627,12 @@ tools.innerHTML=TOOLS.map(([k,t,d,g],i)=>`<div class="tool"><div class="tx"><spa
 
 // reveal + counters (ScrollTrigger, works without IntersectionObserver)
 gsap.registerPlugin(ScrollTrigger);
+// smooth anchor jumps in JS: CSS scroll-behavior:smooth makes ScrollTrigger mis-measure mid-page
+document.addEventListener("click",e=>{
+  const a=e.target.closest('a[href^="#"]'); if(!a||e.defaultPrevented) return;
+  const t=document.querySelector(a.getAttribute("href")); if(!t) return;
+  e.preventDefault(); t.scrollIntoView({behavior:reduce?"auto":"smooth"}); history.pushState(null,"",a.getAttribute("href"));
+});
 const runCount=el=>{const n=+el.dataset.n,t0=performance.now();
   const tick=t=>{const p=Math.min(1,(t-t0)/1400);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+(p===1?"+":"");if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);};
 document.querySelectorAll(".rv").forEach(el=>ScrollTrigger.create({trigger:el,start:"top 94%",once:true,onEnter:()=>el.classList.add("in")}));
